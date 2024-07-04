@@ -65,69 +65,73 @@ After editing the configuration in client.py with the correct IP address and por
 
 How the server and client sides work in a simple TCP communication setup using Python.
 
+# Network-Programming (Simple TCP Server)
+
 ## Server Side:
 
 ### Socket Creation:
 
-    The server creates a socket using `socket.socket(socket.AF_INET, socket.SOCK_STREAM)`. This specifies IPv4 (`socket.AF_INET`) and TCP (`socket.SOCK_STREAM`) for the communication protocol.
+The server creates a socket using `socket.socket(socket.AF_INET, socket.SOCK_STREAM)`. This specifies IPv4 (`socket.AF_INET`) and TCP (`socket.SOCK_STREAM`) for the communication protocol.
 
 ### Binding and Listening:
 
-    The server binds the socket to a specific IP address and port using `server_socket.bind((host, port))`.
-    It then listens for incoming connections with `server_socket.listen(5)`, where 5 specifies the maximum number of queued connections.
+The server binds the socket to a specific IP address and port using `server_socket.bind((host, port))`.
+It then listens for incoming connections with `server_socket.listen(5)`, where 5 specifies the maximum number of queued connections.
 
 ### Accepting Connections:
 
-    When a client tries to connect, `server_socket.accept()` is called, which blocks until a connection is established.
-    It returns a new socket (`client_socket`) and the address (`client_address`) of the client.
+When a client tries to connect, `server_socket.accept()` is called, which blocks until a connection is established.
+It returns a new socket (`client_socket`) and the address (`client_address`) of the client.
 
 ### Handling Client Communication:
 
-    With the `client_socket`, the server can now send and receive data.
-    It receives data from the client using `client_socket.recv(buffer_size)` and sends responses using `client_socket.sendall(data)`.
+With the `client_socket`, the server can now send and receive data.
+It receives data from the client using `client_socket.recv(buffer_size)` and sends responses using `client_socket.sendall(data)`.
 
 ### Closing Connections:
 
-    After communication is complete, the server closes the `client_socket` to release resources with `client_socket.close()`.
+After communication is complete, the server closes the `client_socket` to release resources with `client_socket.close()`.
 
 ## Client Side:
 
 ### Socket Creation:
 
-    Similar to the server, the client creates a socket using `socket.socket(socket.AF_INET, socket.SOCK_STREAM)`.
+Similar to the server, the client creates a socket using `socket.socket(socket.AF_INET, socket.SOCK_STREAM)`.
 
 ### Connecting to Server:
 
-    The client connects to the server using `client_socket.connect((host, port))`, where `host` is the server's IP address and `port` is the server's port number.
+The client connects to the server using `client_socket.connect((host, port))`, where `host` is the server's IP address and `port` is the server's port number.
 
 ### Sending and Receiving Data:
 
-    After establishing the connection, the client can send data to the server using `client_socket.sendall(data)` and receive responses using `client_socket.recv(buffer_size)`.
+After establishing the connection, the client can send data to the server using `client_socket.sendall(data)` and receive responses using `client_socket.recv(buffer_size)`.
 
 ### Closing Connection:
 
-    Once the client finishes sending and receiving data, it closes the socket with `client_socket.close()`.
+Once the client finishes sending and receiving data, it closes the socket with `client_socket.close()`.
 
 ## Example Scenario:
 
 ### Server Setup:
 
-    The server is configured to listen on IP address `192.168.1.43` and port `12345`.
+The server is configured to listen on IP address `192.168.1.43` and port `12345`.
 
 ### Client Setup:
 
-    The client connects to `192.168.1.43:12345` and sends a message "Hello from the client!" to the server.
+The client connects to `192.168.1.43:12345` and sends a message "Hello from the client!" to the server.
 
 ### Server Response:
 
-    The server receives the message, processes it, and sends back a response "Hello from the server!" to the client.
+The server receives the message, processes it, and sends back a response "Hello from the server!" to the client.
 
 ### Client Output:
 
-    The client displays the received response "Hello from the server!".
+The client displays the received response "Hello from the server!".
 
 ## Summary:
 
 - **Server**: Listens for incoming connections, accepts client connections, processes client requests, and sends responses.
   
 - **Client**: Establishes a connection to the server, sends requests, receives responses, and closes the connection.
+
+![alt text](image-1.png)
