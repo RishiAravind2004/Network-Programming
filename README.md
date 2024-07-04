@@ -116,15 +116,15 @@ The server is configured to listen on IP address `192.168.1.43` and port `12345`
 
 ### Client Setup:
 
-The client connects to `192.168.1.43:12345` and sends a message "Hello from the client!" to the server.
+The client connects to `192.168.1.0:12345` and sends a message "Hello, CopyCat!" to the server.
 
 ### Server Response:
 
-The server receives the message, processes it, and sends back a response "Hello from the server!" to the client.
+The server receives the message, processes it, and sends back a response "Hi their!, Welcome to my server!" to the client.
 
 ### Client Output:
 
-The client displays the received response "Hello from the server!".
+The client displays the received response "Hi their!, Welcome to my server!".
 
 ## Summary:
 
