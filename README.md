@@ -26,7 +26,7 @@ You need to have Python installed on your machine. You can download and install 
 
     **Or**
 
-    Simply download both server ([server.py](https://github.com/RishiAravind2004/Network-Programming/raw/main/server.py)) and client ([client.py](https://github.com/RishiAravind2004/Network-Programming/raw/main/client.py)) files.
+    Simply download both server (<a href="https://github.com/RishiAravind2004/Network-Programming/raw/main/server.py" download>Download server.py</a>) and client ([client.py](https://github.com/RishiAravind2004/Network-Programming/raw/main/client.py)) files.
 
 ### Configurations & Running the Code
 
