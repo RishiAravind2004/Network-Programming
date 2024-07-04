@@ -65,8 +65,6 @@ After editing the configuration in client.py with the correct IP address and por
 
 How the server and client sides work in a simple TCP communication setup using Python.
 
-# Network-Programming (Simple TCP Server)
-
 ## Server Side:
 
 ### Socket Creation:
